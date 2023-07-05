@@ -3,6 +3,15 @@
 html{
     font-size: 18px;
     font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light_grayish_violet: hsl(270, 3%, 87%);
+    --Dark_grayish_violet: hsl(279, 6%, 55%);
+    --Very_dark_violet: hsl(278, 68%, 11%);
+
 }
 
 body{
@@ -19,6 +28,60 @@ main{
 
 }
 
+
+
+#card-front{
+    position: absolute;
+    color: var(--White);
+    bottom: 45%;
+    left: 12%;
+}
+
+#logo{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+#card-num{
+    position: absolute;
+    bottom: 15%;
+    left: 4%;
+    font-size:1.7rem;
+    letter-spacing: 0.2rem;
+}
+
+#card-name{
+    position: absolute;
+    bottom:1%;
+    left: 4%;
+}
+
+#card-exp{
+    position: absolute;
+    bottom: 1%;
+    right: 12%;
+}
+
+#card-back{
+    position: absolute;
+    bottom: 7%;
+    left: 19%;
+}
+
+#cvc{
+    position: absolute;
+    top: 37%;
+    right: 20%;
+    color: var(--White);
+}
+
+#formbg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Footer */
 .attribution { font-size: 11px; text-align: center; background-color: darkblue; }
