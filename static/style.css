@@ -119,15 +119,16 @@ form{
     width: 100%;
     height: 2.5em;
     margin-bottom: 1em;
-    border: 1px solid var(--Light_grayish_violet);
+    border: 2px solid var(--Light_grayish_violet);
     border-radius: 6px;
     color: var(--Very_dark_violet);
     font-weight: 600;
     transition: all 0.4s;
 }
 
-.inp_sec:hover,.inp_sec:focus{
-    border: 1px solid purple;
+.inp_sec:focus{
+    outline: none;
+    border: 2px solid var(--Very_dark_violet);
 }
 
 #month,#year{

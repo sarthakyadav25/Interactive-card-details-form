@@ -1,0 +1,31 @@
+/* root and body */
+
+
+/* main */
+main{
+    flex-direction: column;
+}
+
+#cardsbg{
+    margin-bottom: 4em;
+}
+
+#formbg{
+    margin-bottom: 1em;
+}
+
+#main-img{
+    width: 100%;
+}
+
+#card-front{
+    display: none;
+}
+
+#card-back{
+    display: none;
+}
+
+form{
+    width: 90%;
+}

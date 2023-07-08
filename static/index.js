@@ -20,6 +20,8 @@ const format = document.createElement('p');
 format.innerText = "Wrong format,number only";
 format.style = "color:red;font-size:0.5rem;margin:0;padding:0;transition:all 0.3s;";
 
+const bstyle = "border:2px solid red;"
+
 
 //Events and functions
 
@@ -41,6 +43,7 @@ n.addEventListener('keyup',()=>{
         n.after(blank);
         format.remove();
         cardnum.innerText = "0000000000000000";
+        n.style = bstyle;
     }
     else if(n.value.match(regEx)){
         blank.remove();
@@ -48,11 +51,13 @@ n.addEventListener('keyup',()=>{
     else if ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".includes(n.value[n.value.length-1])){
         n.after(format);
         blank.remove();
+        n.style = bstyle;
     }
     else{
         blank.remove();
         format.remove();
         cardnum.innerText = n.value;
+        n.style = "none";
     }
 })
 
@@ -63,15 +68,18 @@ month.addEventListener("keyup",()=>{
         year.after(blank);
         format.remove();
         cardexp.innerText = "00" + "/" + yearval;
+        month.style = bstyle;
     }
     else if("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".includes(month.value[month.value.length-1] || month.value.length > 2)){
         year.after(format);
         blank.remove();
+        month.style = bstyle;
     }
     else{
         format.remove();
         blank.remove();
         cardexp.innerText = month.value + "/" + yearval;
+        month.style = "none";
 
 
     }
@@ -84,15 +92,18 @@ year.addEventListener("keyup",()=>{
         year.after(blank);
         format.remove();
         cardexp.innerText = monthval + "/" + "00";
+        year.style = bstyle;
     }
     else if("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".includes(year.value[year.value.length-1] || year.value.length > 2)){
         year.after(format);
         blank.remove();
+        year.style = bstyle;
     }
     else{
         format.remove();
         blank.remove();
         cardexp.innerText = monthval + "/" + year.value;
+        year.style = "none";
     }
 })
 
@@ -101,24 +112,31 @@ cvc.addEventListener("keyup",()=>{
         cvc.after(blank);
         format.remove();
         cardcvc.innerText = "000";
+        cvc.style = bstyle;
     }
     else if("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".includes(cvc.value[cvc.value.length-1])){
         cvc.after(format);
         blank.remove();
+        cvc.style = bstyle;
     }
     else{
         format.remove();
         blank.remove();
         cardcvc.innerText = cvc.value;
+        cvc.style = "none";
     }
 })
 
 input_name.addEventListener("keyup",()=>{
     if(input_name.value == ""){
         cname.innerText = "Jane Appleseed";
+        input_name.after(blank);
+        input_name.style = bstyle;
     }
     else{
 
         cname.innerText = input_name.value;
+        blank.remove()
+        input_name.style = "none";
     }
 })
