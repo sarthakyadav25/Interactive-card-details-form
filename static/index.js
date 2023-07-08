@@ -27,7 +27,7 @@ const bstyle = "border:2px solid red;"
 
 window.addEventListener("resize",()=>{
     const image = document.getElementById("main-img");
-    const isSmallScreen = window.matchMedia("(max-width: 675px)").matches;
+    const isSmallScreen = window.matchMedia("(max-width: 900px)").matches;
     
     if (isSmallScreen) {
       image.src = "/images/bg-main-mobile.png";

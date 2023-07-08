@@ -4,6 +4,7 @@
 /* main */
 main{
     flex-direction: column;
+    width: 100%;
 }
 
 #cardsbg{
@@ -19,12 +20,28 @@ main{
 }
 
 #card-front{
-    display: none;
+    left: 5%;
+    position: absolute;
+    bottom: 56%;
+    right: 21%;
+    z-index: 1;
 }
 
 #card-back{
-    display: none;
+    bottom: 69%;
+    left: 18%;
+    right: 3%;
 }
+
+#cvc{
+    right: 12%;
+    top: 32%;
+}
+
+#card-num{
+    font-size: 1rem;
+}
+
 
 form{
     width: 90%;
